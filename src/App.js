@@ -1,24 +1,21 @@
-import logo from './logo.svg';
+
+import Api from './Api';
 import './App.css';
+import Meals from './Meals'
+
+
 
 function App() {
+
+  const { data: mealsCategories } = Api('https://www.themealdb.com/api/json/v1/1/categories.php')
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <div className="home">
+    <h1>Meal App</h1>
+    { mealsCategories && <Meals users={mealsCategories} /> }
+  </div>
+
   );
 }
 
