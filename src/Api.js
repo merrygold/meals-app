@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 
 
 const Api = (url) => {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState(null);
 
   useEffect(() => {
       fetch(url)
@@ -15,7 +15,7 @@ const Api = (url) => {
       })
 
       .then(data => { 
-        setData(data.categories);
+        setData(data);
       })
 
 
