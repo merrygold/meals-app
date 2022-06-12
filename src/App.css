@@ -1,0 +1,32 @@
+.home-heading {
+    text-align: center;
+}
+
+.home-img {
+    width: 950px;
+    border-radius: 35px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    }
+
+.navbar-container {
+    background-color:blueviolet;
+    display: flex;
+    justify-content:center;
+    height: 50px;
+    padding: 40px auto;
+}
+
+.nav-1
+{
+
+  
+    margin-top: 10px;
+    margin: 10px 10px;
+    border-radius: 5px;
+    /* background-color: blue; */
+    align-content: center;
+    text-align: center;
+}

@@ -4,6 +4,8 @@ import './App.css';
 import Meals from './Meals'
 import MealDetails from './Meal-Detail'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Home from './Home';
+import Navbar from './Navbar';
 
 
 
@@ -16,9 +18,13 @@ function App() {
   
     <Router>
       <div className="App">
+          <Navbar/>
           <Switch>
-            <Route exact path="/">
+            <Route  path="/Categories">
             { mealsCategories && <Meals users={mealsCategories.categories} /> }  
+            </Route>
+            <Route exact path="/">
+             <Home/>  
             </Route>
             <Route path="/meal-details/:category">
               <MealDetails />
