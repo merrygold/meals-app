@@ -8,7 +8,7 @@ const Meals = ({ users }) => {
           <div className="row justify-content-center">
             <div className="col-md-6 text-center mb-5">
               <h1>
-                <b> Meal Table</b>
+                <b> Meal Categories</b>
               </h1>
             </div>
           </div>

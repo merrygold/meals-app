@@ -6,9 +6,9 @@ import Api from "./Api";
 
 const Recipe = () => {
 
-    const { id } = useParams();
+const { id } = useParams();
 const ApiUrl =
-  "https://www.themealdb.com/api/json/v1/1/lookup.php?i=" + id;
+"https://www.themealdb.com/api/json/v1/1/lookup.php?i=" + id;
 const { data: RecipeDetail } = Api(ApiUrl);
 
     return (  
@@ -18,7 +18,7 @@ const { data: RecipeDetail } = Api(ApiUrl);
           <div className="row justify-content-center">
             <div className="col-md-6 text-center mb-5">
               <h1>
-                <b> Meal Table</b>
+                <b>{RecipeDetail &&  RecipeDetail.meals[0].strMeal} Meal Detail</b>
               </h1>
             </div>
           </div>
@@ -47,23 +47,23 @@ const { data: RecipeDetail } = Api(ApiUrl);
                           <td>
                             <img className="meal-img" src={recipe.strMealThumb} alt="Recipe"></img>
                           </td>
-                          <td>
-                            <p>{recipe.strMeal}</p>
-                          </td>
+
 
                           <td>
                             <b>{recipe.strCategory}</b>
                           </td>
 
                           <td>
-                            <b>{recipe.strMeal}</b>
+                            <p>{recipe.strArea}</p>
                           </td>
 
                           <td>
                             <b>{recipe.strInstructions}</b>
                           </td>
 
-                          
+                          <td>
+                            <b>{recipe.strMeal}</b>
+                          </td>
 
                           <td>
                             <a href={recipe.strYoutube}> Watch on Youtube</a>

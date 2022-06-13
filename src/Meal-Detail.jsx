@@ -16,7 +16,7 @@ const MealDetails = () => {
         <div className="row justify-content-center">
           <div className="col-md-6 text-center mb-5">
             <h1>
-              <b> Meals Available in Restorant</b>
+               {category} Meals Available in Menu
             </h1>
           </div>
         </div>

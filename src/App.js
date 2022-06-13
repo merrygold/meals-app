@@ -9,8 +9,6 @@ import Navbar from './Navbar';
 import Recipe from './Recipe';
 
 
-
-
 function App() {
 
   const { data: mealsCategories } = Api('https://www.themealdb.com/api/json/v1/1/categories.php')
