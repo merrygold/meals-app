@@ -6,6 +6,7 @@ import MealDetails from './Meal-Detail'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './Home';
 import Navbar from './Navbar';
+import Recipe from './Recipe';
 
 
 
@@ -28,6 +29,9 @@ function App() {
             </Route>
             <Route path="/meal-details/:category">
               <MealDetails />
+            </Route>
+            <Route path="/recipe/:id">
+              <Recipe />
             </Route>
           </Switch>
         </div>
